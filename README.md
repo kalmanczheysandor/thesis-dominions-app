@@ -1,4 +1,9 @@
 
+
+> [!WARNING]
+> - A végső üzemeltetési tesztek folyamatban vannak még. Várható befejezés 2026.11.23 23:59
+> - A teszteléshez kizárólag a lentebb  megadott felhasználói fiókokat használja!
+
 # DOMINIONS
 
 **Készítő:** Kálmánchey Sándor  
@@ -8,10 +13,6 @@
 **Állapot:** Majdnem kész
 
 ---
-> [!WARNING]
-> - A végső üzemeltetési tesztek folyamatban vannak még. Várható befejezés 2026.11.23 23:59
-> - A teszteléshez kizárólag a lentebb  megadott felhasználói fiókokat használja!
-
 
 **Szakdolgozat:** MESTERSÉGES INTELLIGENCIA ALKALMAZÁSA TÖBBSZEMÉLYES JÁTÉKOK NAGYVÁLLALATI SZEMLÉLETŰ IMPLEMENTÁCIÓJÁBAN  
 **Témavezető:** Dr. Kádek Tamás  
