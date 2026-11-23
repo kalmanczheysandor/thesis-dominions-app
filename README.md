@@ -5,13 +5,15 @@
 **E-mail:** kalmanczheysandor@gmail.com  
 **Tel.:** +3620/667-41-48  
 **Verzió:** 1.0  
-**Állapot:** Majdnem kész – a végső üzemeltetési ellenőrzések folyamatban vannak. Várható befejezés 2026.11.23 23:59
+**Állapot:** Majdnem kész
 
 ---
+> [!WARNING]
+> - A végső üzemeltetési tesztek folyamatban vannak még. Várható befejezés 2026.11.23 23:59
+> - A teszteléshez kizárólag a lentebb  megadott felhasználói fiókokat használja!
 
-**Szakdolgozat:**  
-MESTERSÉGES INTELLIGENCIA ALKALMAZÁSA TÖBBSZEMÉLYES JÁTÉKOK NAGYVÁLLALATI SZEMLÉLETŰ IMPLEMENTÁCIÓJÁBAN
 
+**Szakdolgozat:** MESTERSÉGES INTELLIGENCIA ALKALMAZÁSA TÖBBSZEMÉLYES JÁTÉKOK NAGYVÁLLALATI SZEMLÉLETŰ IMPLEMENTÁCIÓJÁBAN  
 **Témavezető:** Dr. Kádek Tamás  
 **Intézmény:** Debreceni Egyetem – Informatikai Kar
 
