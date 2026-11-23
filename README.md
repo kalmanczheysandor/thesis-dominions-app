@@ -1,77 +1,145 @@
 
+# Projekt neve
 
-> [!NOTE]
-> - A végső üzemeltetési tesztek folyamatban vannak még. Várható befejezés 2026.11.23 23:59
-> - A teszteléshez kizárólag a lentebb  megadott felhasználói fiókokat használja!
+A szakdolgozati projekt rövid bemutatása.
 
-# DOMINIONS
-
-**Készítő:** Kálmánchey Sándor  
-**E-mail:** kalmanczheysandor@gmail.com  
-**Tel.:** +3620/667-41-48  
+**Készítő:** [Név]  
 **Verzió:** 1.0  
-**Állapot:** Majdnem kész
-
----
-
-**Szakdolgozat:** MESTERSÉGES INTELLIGENCIA ALKALMAZÁSA TÖBBSZEMÉLYES JÁTÉKOK NAGYVÁLLALATI SZEMLÉLETŰ IMPLEMENTÁCIÓJÁBAN  
-**Témavezető:** Dr. Kádek Tamás  
-**Intézmény:** Debreceni Egyetem – Informatikai Kar
+**Állapot:** Fejlesztés alatt
 
 ---
 
 ## 1. A projektről
 
-Az elkészített alkalmazáscsomag egy olyan szolgáltatást valósít meg, amely egy dedikált online felületen keresztül biztosít játéklehetőséget természetes és mesterséges játékosok számára egyaránt. A saját tervezésű **Dominions** egy többszereplős, determinisztikus, körökre osztott stratégiai játék, amelyben a résztvevők szimultán, egymás döntéseinek ismerete nélkül hozzák meg lépéseiket. A felhasználók különböző játékpályák közül választhatnak, játékmeneteket indíthatnak, mások játékaihoz csatlakozhatnak, és eltérő mesterségesintelligencia-algoritmusokkal megvalósított gépi játékosokkal is megküzdhetnek.
+Ez a szoftver [a projekt céljának rövid leírása].
 
-Az alkalmazáscsomag két önálló, **Vue.js-alapú kliensalkalmazást** – egy játékfelületet és egy adminisztrációs felületet –, valamint egy **Spring Cloudra épülő, microservice-alapú, konténerizálható backendrendszert** foglal magában. Az elkülönített adminisztrációs felület lehetőséget biztosít a felhasználók és jogosultságok, a játékpályák, valamint a mesterséges játékosok és konfigurációik kezelésére, továbbá a neurális hálók betanítási folyamatainak vezérlésére és eredményességük ellenőrzésére.
+### 1.1. Főbb jellemzők
+
+- Első fontos funkció
+- Második fontos funkció
+- Harmadik fontos funkció
+  - Alfunkció A
+  - Alfunkció B
+
+### 1.2. Alkalmazott technológiák
+
+| Technológia | Felhasználás |
+|---|---|
+| Python | Backend |
+| JavaScript | Frontend |
+| SQLite | Adatbázis |
 
 ---
 
-## 2. Tesztelési hozzáférések
+## 2. Telepítési útmutató
 
-Az elkészített alkalmazás telepített és üzembe helyezett változata az alábbi webcímeken érhető el.
+### 2.1. Rendszerkövetelmények
 
-A rendszer kipróbálásához előre létrehozott tesztfelhasználói fiókok állnak rendelkezésre.
+- Windows 10/11 vagy Linux
+- [Szükséges programok]
+- [Egyéb követelmények]
 
-### 2.1. Adminisztrációs felület
+### 2.2. Letöltés
 
-**Elérhetőség:** https://admin.dominions.hu
+A projekt klónozása:
 
-Az adminisztrációs felület a rendszer üzemeltetéséhez és kezeléséhez szükséges funkciókat biztosítja, többek között a felhasználók, a jogosultságok, a játékpályák és a mesterséges játékosok adminisztrációját. Valamint a neurális hálók betanítását.
+```bash
+git clone https://github.com/FELHASZNALO/PROJEKT.git
+```
 
-#### Teszteléshez használható fiókok
+### 2.3. Telepítés
 
-| Felhasználónév (e-mail) | Jelszó |
-|---|---|
-| admin.andor1@game.hu | `AdminAndor1` |
-| admin.andor2@game.hu | `AdminAndor2` |
-| admin.andor3@game.hu | `AdminAndor3` |
-| admin.andor4@game.hu | `AdminAndor4` |
+1. Töltsd le a projektet.
+2. Telepítsd a szükséges függőségeket.
+3. Állítsd be a konfigurációt.
+4. Indítsd el a programot.
 
-### 2.2. Játékfelület
+### 2.4. A program indítása
 
-**Elérhetőség:** https://game.dominions.hu
+```bash
+# IDE KERÜL A VALÓDI INDÍTÁSI PARANCS
+```
 
-A játékfelületen a felhasználók bejelentkezhetnek, különböző játékpályák közül választhatnak, új játékmeneteket indíthatnak, illetve csatlakozhatnak mások által létrehozott játékokhoz.
-
-A játékmenetekben természetes és mesterséges játékosok egyaránt részt vehetnek.
-
-#### Teszteléshez használható fiókok
-
-| Felhasználónév (e-mail) | Jelszó |
-|---|---|
-| jatekos.jakab1@game.hu | `JatekosJakab1` |
-| jatekos.jakab2@game.hu | `JatekosJakab2` |
-| jatekos.jakab3@game.hu | `JatekosJakab3` |
-| jatekos.jakab4@game.hu | `JatekosJakab4` |
+> **Fontos:** Az első indítás előtt ellenőrizd a konfigurációs beállításokat.
 
 ---
 
-### 2.3. Megjegyzések a teszteléshez
+## 3. A program funkciói
 
-A felsorolt felhasználói fiókok a szakdolgozati alkalmazás funkcióinak kipróbálására szolgálnak.
+### 3.1. Első funkció
 
-A több rendelkezésre álló játékosfiók lehetővé teszi a többszemélyes játékmenetek tesztelését, akár több böngészőablak vagy különböző böngészők használatával.
+**Leírás:** Az első funkció működésének bemutatása.
 
-**Figyelem:** Az alkalmazás végső üzemeltetési ellenőrzései még folyamatban vannak, ezért egyes funkciók működésében átmeneti problémák előfordulhatnak.
+![Első funkció képernyőképe](images/funkcio-01.png)
+
+### 3.2. Második funkció
+
+**Leírás:** A második funkció bemutatása.
+
+![Második funkció képernyőképe](images/funkcio-02.png)
+
+### 3.3. Funkciók áttekintése
+
+| Funkció | Leírás | Állapot |
+|---|---|---|
+| Funkció 1 | Rövid leírás | Kész |
+| Funkció 2 | Rövid leírás | Kész |
+| Funkció 3 | Rövid leírás | Fejlesztés alatt |
+
+---
+
+## 4. Videós bemutató
+
+### 4.1. Telepítési videó
+
+[![Telepítési útmutató](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
+### 4.2. A program működésének bemutatása
+
+[▶ Videó megtekintése](https://www.youtube.com/watch?v=VIDEO_ID)
+
+---
+
+## 5. Használati útmutató
+
+### 5.1. Első lépések
+
+1. Indítsd el az alkalmazást.
+2. Nyisd meg a főmenüt.
+3. Válaszd ki a kívánt funkciót.
+
+### 5.2. Használati példa
+
+```text
+Bemenet: [Példaadat]
+Művelet: [Végrehajtott funkció]
+Eredmény: [Elvárt eredmény]
+```
+
+---
+
+## 6. Ismert problémák
+
+- [ ] Első megoldandó feladat
+- [ ] Második megoldandó feladat
+- [x] Elkészült funkció
+
+### 6.1. Hibaelhárítás
+
+**Probléma:** A program nem indul.
+
+**Megoldás:** Ellenőrizd a telepítési követelményeket.
+
+---
+
+## 7. További dokumentáció
+
+- [Telepítési útmutató](docs/telepites.md)
+- [Részletes használati útmutató](docs/hasznalat.md)
+- [GitHub-repository](https://github.com/FELHASZNALO/PROJEKT)
+
+---
+
+## 8. Licenc
+
+[Ide kerül a projekt licencinformációja.]
