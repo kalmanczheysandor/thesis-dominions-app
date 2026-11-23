@@ -1,6 +1,5 @@
 
 > [!NOTE]
-> - A végső üzemeltetési tesztek folyamatban vannak még. Várható befejezés 2026.11.23 23:59
 > - A teszteléshez kizárólag a lentebb  megadott felhasználói fiókokat használja!
 
 # DOMINIONS
@@ -9,7 +8,7 @@
 **E-mail:** kalmanczheysandor@gmail.com  
 **Tel.:** +3620/667-41-48  
 **Verzió:** 1.0  
-**Állapot:** Majdnem kész
+**Állapot:** Kész
 
 ---
 
@@ -73,4 +72,3 @@ A felsorolt felhasználói fiókok a szakdolgozati alkalmazás funkcióinak kipr
 
 A több rendelkezésre álló játékosfiók lehetővé teszi a többszemélyes játékmenetek tesztelését, akár több böngészőablak vagy különböző böngészők használatával.
 
-**Figyelem:** Az alkalmazás végső üzemeltetési ellenőrzései még folyamatban vannak, ezért egyes funkciók működésében átmeneti problémák előfordulhatnak.
