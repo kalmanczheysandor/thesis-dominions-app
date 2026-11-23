@@ -1,0 +1,8 @@
+server:
+  port: 15020
+
+spring:
+  application:
+    name: 'server-game'
+  config:
+    import: configserver:http://server-config:8888

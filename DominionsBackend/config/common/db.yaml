@@ -1,0 +1,59 @@
+app:
+  datasource:
+    main:
+      jdbc-url: jdbc:mysql://${DB_HOST}:${DB_PORT}/dominions?createDatabaseIfNotExist=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      hikari:
+        transaction-isolation: TRANSACTION_REPEATABLE_READ
+        maximum-pool-size: 3
+        minimum-idle: 1
+    session:
+      jdbc-url: jdbc:mysql://${DB_HOST}:${DB_PORT}/dominions_session?createDatabaseIfNotExist=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      hikari:
+        transaction-isolation: TRANSACTION_REPEATABLE_READ
+        maximum-pool-size: 3
+        minimum-idle: 1
+    ai-liz:
+      jdbc-url: jdbc:mysql://${DB_HOST}:${DB_PORT}/dominions_ai_liz?createDatabaseIfNotExist=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      hikari:
+        transaction-isolation: TRANSACTION_REPEATABLE_READ
+        maximum-pool-size: 3
+        minimum-idle: 1
+
+    ai-hugo:
+      jdbc-url: jdbc:mysql://${DB_HOST}:${DB_PORT}/dominions_ai_hugo?createDatabaseIfNotExist=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      hikari:
+        transaction-isolation: TRANSACTION_REPEATABLE_READ
+        maximum-pool-size: 3
+        minimum-idle: 1
+
+
+    ai-otto:
+      jdbc-url: jdbc:mysql://${DB_HOST}:${DB_PORT}/dominions_ai_otto?createDatabaseIfNotExist=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      hikari:
+        transaction-isolation: TRANSACTION_REPEATABLE_READ
+        maximum-pool-size: 3
+        minimum-idle: 1
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 3
+      minimum-idle: 1
+  jpa:
+    show: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: on

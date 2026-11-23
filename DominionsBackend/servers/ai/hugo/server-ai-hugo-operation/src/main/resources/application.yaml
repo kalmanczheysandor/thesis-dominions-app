@@ -1,0 +1,14 @@
+server:
+  port: 15043
+
+spring:
+  application:
+    name: 'server-ai-hugo-operation'
+  config:
+    import: configserver:http://server-config:8888
+
+
+
+
+
+

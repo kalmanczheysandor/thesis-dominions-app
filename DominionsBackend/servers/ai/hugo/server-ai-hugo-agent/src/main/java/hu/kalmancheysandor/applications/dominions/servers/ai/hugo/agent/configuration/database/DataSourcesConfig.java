@@ -1,0 +1,23 @@
+package hu.kalmancheysandor.applications.dominions.servers.ai.hugo.agent.configuration.database;
+
+import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+import javax.sql.DataSource;
+
+@Configuration
+public class DataSourcesConfig {
+
+    @Bean
+    @Primary
+    @ConfigurationProperties("app.datasource.ai-hugo")
+    public DataSource operationDataSource() {
+        HikariDataSource ds = DataSourceBuilder.create().type(HikariDataSource.class).build();
+        return ds;
+    }
+
+}

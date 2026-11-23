@@ -1,0 +1,63 @@
+package hu.kalmancheysandor.applications.dominions.apis.server.ai.liz.shared.repository.training;
+
+
+import hu.kalmancheysandor.applications.dominions.apis.server.ai.liz.shared.entity.training.LizCharacter;
+import hu.kalmancheysandor.applications.dominions.apis.util.uuid.UUIDRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+
+@Repository
+public interface LizCharacterRepository extends JpaRepository<LizCharacter, String>, UUIDRepository<LizCharacter, String> {
+
+    public LizCharacter findById(int characterId);
+
+    public LizCharacter findByUuid(String characterUuid);
+
+    public LizCharacter findByCode(String code);
+
+    public List<LizCharacter> findAll();
+
+    public void deleteById(int characterId);
+
+    public void deleteByUuid(String characterUuid);
+
+    public boolean existsById(int characterId);
+
+    public boolean existsByUuid(String characterUuid);
+
+    public LizCharacter save(LizCharacter character);
+
+    @Query("SELECT t FROM LizCharacter t WHERE t.enabled=true")
+    List<LizCharacter> listAllEnabled();
+
+    @Query("SELECT t FROM LizCharacter t")
+    List<LizCharacter> listAll();
+
+
+    @Query("SELECT CASE WHEN count(t) > 0 THEN true ELSE false END FROM LizCharacter t WHERE t.name = :name")
+    public boolean isNameReserved(@Param("name") String title);
+
+    @Query("SELECT CASE WHEN count(t) > 0 THEN true ELSE false END FROM LizCharacter t WHERE t.name = :name and t.id<> :excludedId")
+    public boolean isNameReserved(@Param("name") String title, @Param("excludedId") int excludedId);
+
+
+    @Query("SELECT CASE WHEN count(t) > 0 THEN true ELSE false END FROM LizCharacter t WHERE t.code = :code")
+    public boolean isCodeReserved(@Param("code") String title);
+
+    @Query("SELECT CASE WHEN count(t) > 0 THEN true ELSE false END FROM LizCharacter t WHERE t.code = :code and t.id<> :excludedId")
+    public boolean isCodeReserved(@Param("code") String title, @Param("excludedId") int excludedId);
+
+
+    @Query("SELECT t.enabled FROM LizCharacter t WHERE t.id=:characterId")
+    boolean isEnabled(@Param("characterId") int characterId);
+
+    @Query("SELECT FALSE")
+    boolean isReferencedElsewhere(@Param("characterId") int characterId);
+}
+
+

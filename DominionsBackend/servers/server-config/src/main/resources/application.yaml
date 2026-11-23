@@ -1,0 +1,51 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    org.springframework.cloud.config.client: DEBUG
+    org.springframework.cloud.config.server: DEBUG
+
+spring:
+  application:
+    name: 'server-config'
+
+  profiles:
+    active: composite,native
+
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: file:/config/common
+
+          - type: native
+            search-locations: file:/config
+
+          - type: native
+            search-locations:
+              - file:/config/common
+              - file:/config/{application}
+              - file:/config
+
+    bus:
+      enabled: true
+
+  rabbitmq:
+    host: ${RABBITMQ_MONITORING_HOST}
+    port: ${RABBITMQ_MONITORING_PORT}
+    username: ${RABBITMQ_MONITORING_USERNAME}
+    password: ${RABBITMQ_MONITORING_PASSWORD}
+    virtual-host: ${RABBITMQ_MONITORING_VIRTUAL_HOST}
+debug: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh,busenv,refresh
+
+eureka:
+  client:
+    enabled: false

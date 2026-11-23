@@ -1,0 +1,9 @@
+server:
+  port: 15009
+
+spring:
+  application:
+    name: 'server-site'
+  config:
+    import: configserver:http://server-config:8888
+

@@ -1,0 +1,8 @@
+server:
+  port: 15053
+
+spring:
+  application:
+    name: 'server-ai-hugo-agent'
+  config:
+    import: configserver:http://server-config:8888

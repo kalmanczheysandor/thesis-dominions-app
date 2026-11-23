@@ -1,0 +1,16 @@
+server:
+  port: 15000
+servlet:
+  session:
+    cookie:
+      same-site: none     # none: Session variable is accepted from anywhere
+      secure: false      # false: allows https
+spring:
+  application:
+    name: 'server-gateway'
+  config:
+    import: configserver:http://server-config:8888
+
+
+
+

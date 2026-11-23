@@ -1,0 +1,64 @@
+
+
+global:
+  paths:
+    config-repo: file:/config
+  monitoring:
+    rabbitmq:
+      host: ${RABBITMQ_MONITORING_HOST}
+      port: ${RABBITMQ_MONITORING_PORT}
+      username: ${RABBITMQ_MONITORING_USERNAME}
+      password: ${RABBITMQ_MONITORING_PASSWORD}
+      virtual-host: ${RABBITMQ_MONITORING_VIRTUAL_HOST}
+  management:
+    endpoints:
+      web:
+        exposure:
+#          include: "health,info,prometheus,busrefresh,busenv,refresh"
+          include: "*"
+app:
+
+  test:
+    x: 545
+  global:
+    data-folder: ${APP_GLOBAL_DATA_FOLDER}
+    images-folder: "${app.global.data-folder}/images"
+    secret-application-key: ${APP_GLOBAL_SECRET_APPLICATION_KEY}
+  urls:
+    admin-site: ${APP_URLS_ADMIN_SITE}
+    game-site: ${APP_URLS_GAME_SITE}
+    backend: ${APP_URLS_BACKEND}
+
+  game-server:
+    session-management:
+      expirationHours: 1
+
+  liz-server:
+    neural-network:
+      base-folder: "${app.global.data-folder}/ai/liz"
+
+  site-server:
+    account:
+      sign-up:
+        verificationExpirationMinutes: 60
+      recovery:
+        verificationExpirationMinutes: 5
+      settings:
+        profile:
+          photo-path: "${app.global.images-folder}/site-user/profile"
+    game-scenario:
+      main-image-path: "${app.global.images-folder}/game/scenario"
+
+  admin-server:
+      account:
+        site:
+          user:
+            photo-path: "${app.global.images-folder}/site-user/profile"
+        admin:
+          user:
+            photo-path: "${app.global.images-folder}/admin-user/profile"
+          settings:
+            profile:
+              photo-path: "${app.global.images-folder}/admin-user/profile"
+      game-scenario:
+        main-image-path: "${app.global.images-folder}/game/scenario"

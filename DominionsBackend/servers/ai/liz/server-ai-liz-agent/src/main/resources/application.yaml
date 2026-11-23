@@ -1,0 +1,9 @@
+server:
+  port: 15041
+
+spring:
+  application:
+    name: 'server-ai-liz-agent'
+  config:
+    import: configserver:http://server-config:8888
+
